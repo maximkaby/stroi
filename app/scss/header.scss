@@ -1,0 +1,59 @@
+@import "partials/mixin";
+@import "partials/params";
+
+header {
+
+  .navbar {
+    padding: 0!important;
+    top: 0;
+    position: fixed!important;
+    width: 100%;
+    z-index: 10;
+
+    &-collapse {
+      justify-content: flex-end;
+    }
+
+    .navbar-brand {
+      padding-top: 0!important;
+      padding-left: 2rem;
+    }
+
+    .nav-link {
+      text-align: center;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      color: #343434 !important;
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+      height: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #F7CFA3 !important;
+        transition: 0.3s;
+      }
+
+      @include media-breakpoint-down($lg){
+        width: 100%;
+      }
+    }
+
+    .navbar-toggler {
+      padding: 32px;
+      border: 0;
+    }
+
+    .navbar-nav {
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
+
+}

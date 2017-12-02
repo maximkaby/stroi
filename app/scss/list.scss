@@ -1,0 +1,68 @@
+@import "partials/params";
+@import "partials/mixin";
+
+.wrapper__list {
+  background: #f9f9f9;
+
+  ul {
+    @include media-breakpoint-down($md) {
+      padding: 0 0 0 20px;
+    }
+  }
+
+  .list {
+    @include media-breakpoint-down($md) {
+      padding: 0!important;
+    }
+  }
+
+  .list__title {
+    padding: 40px 0 20px 0;
+    text-align: center;
+    font-size: 35px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+
+    @include media-breakpoint-down($md) {
+      font-size: 21px;
+    }
+  }
+
+  .list__subtitles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1px;
+    padding: 20px 0 40px;
+
+    @include media-breakpoint-between($xs, $md) {
+      padding: 20px 0 10px;
+    }
+
+
+    li {
+      @include clear-list;
+      padding: 12px 0;
+      line-height: 24px;
+      background: none;
+      font-size: 22px;
+      color: #333739;
+      font-family: 'Roboto Light', sans-serif;
+      display: flex;
+      align-items: center;
+      i {
+        margin-right: 15px;
+      }
+      span {
+        width: 100%;
+      }
+
+      @include media-breakpoint-down($md) {
+        padding: 6px 0;
+        font-size: 15px;
+      }
+    }
+  }
+
+}

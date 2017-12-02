@@ -1,0 +1,100 @@
+@import "partials/params";
+@import "partials/mixin";
+
+
+.wrapper {
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1499689496495-5bdf4421b725?auto=format&fit=crop&w=1527&h=800&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size: cover;
+
+
+  @include media-breakpoint-between($xs, $sm) {
+      height: 60vh;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+
+  .wrapper__content {
+    z-index: 2;
+    height: 100vh;
+
+    .button {
+      display: flex;
+      justify-content: center;
+      padding-top: 3vh;
+
+      @include media-breakpoint-between($xs, $sm) {
+        font-size: 10px;
+      }
+    }
+
+    #input-submit2 {
+      width: auto;
+      padding: 0.7em 2em;
+      transition: all 0.3s;
+      color: white;
+      background: #EFA85B;
+      cursor: pointer;
+      border-radius: 30px;
+      border: none;
+
+      &:hover {
+        transition: 0.5s;
+        box-shadow: 0 1px 1px 1px rgba(#aaa, 0.1);
+        background-color: #F7C084;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &__title {
+    padding-top: 35vh;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+    color: white;
+
+    @include media-breakpoint-between($md, $lg) {
+      font-size: 50px;
+    }
+    @include media-breakpoint-between($sm, $md) {
+      font-size: 40px;
+    }
+    @include media-breakpoint-between($xs, $sm) {
+      padding-top: 25vh;
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+
+    @include media-breakpoint-between($md, $lg) {
+      font-size: 30px;
+    }
+    @include media-breakpoint-between($sm, $md) {
+      font-size: 25px;
+    }
+    @include media-breakpoint-between($xs, $sm) {
+      font-size: 15px;
+    }
+  }
+
+}

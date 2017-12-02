@@ -1,0 +1,67 @@
+@import "partials/mixin";
+@import "partials/params";
+
+.wrapper__cooperating {
+  background-color: #3669D5;
+
+  padding-bottom: 40px;
+
+  .cooperating__condition {
+    @include media-breakpoint-down($lg) {
+      max-width: 100% !important;
+    }
+  }
+
+  .condition__title {
+    text-align: center;
+    font-size: 35px;
+    color: $white;
+    padding: 40px;
+  }
+
+  .condition__subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    @include media-breakpoint-down($lg){
+      flex-direction: column;
+      align-items: flex-start;
+
+      br {
+        display: none;
+      }
+    }
+
+    .subtitle__description {
+      box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.12);
+      padding: 10px 20px 10px 20px;
+      border: 1px solid #3e93ca;
+      height: 220px;
+      font-size: 14px;
+      color: #a9d1eb;
+
+      @include media-breakpoint-down($lg) {
+        width: 100%;
+        height: auto;
+      }
+
+      span {
+        font-size: 19px;
+        font-family: Roboto, sans-serif;
+        color: $white;
+      }
+    }
+
+    .subtitle__description:nth-child(2) {
+      margin: 0 4%;
+
+      @include media-breakpoint-down($lg) {
+        margin: 3% 0;
+
+      }
+    }
+  }
+}

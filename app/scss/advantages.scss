@@ -1,0 +1,90 @@
+@import "partials/params";
+@import "partials/mixin";
+
+.wrapper__advantages {
+  background: url("../img/back-what.png");
+  overflow: hidden;
+
+
+  .wrapper__bgc {
+    @include media-breakpoint-down($lg){
+      max-width: 100%!important;
+    }
+  }
+
+  .advantages {
+    &__title {
+      opacity: 0;
+      text-align: center;
+      font-size: 35px;
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      padding: 30px 0;
+      color: $white;
+
+      @include media-breakpoint-between($xs, $sm) {
+        padding: 15px 0;
+        font-size: 30px;
+      }
+    }
+
+    &__subtitle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+
+      @include media-breakpoint-down($lg) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+
+        br {
+          display: none;
+        }
+      }
+
+      ul {
+        @include media-breakpoint-between($xs, $sm) {
+          padding: 0 0 0 10px;
+          margin-bottom: 0;
+        }
+      }
+
+      li {
+        opacity: 0;
+        @include clear-list;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        background: none;
+        font-size: 21px;
+        color: #fff;
+        margin-bottom: 25px;
+
+        @include media-breakpoint-between($xs, $sm) {
+          margin-bottom: 12px;
+          font-size: 14px;
+        }
+
+         span {
+             color: #c6e2f5;
+         }
+
+        img {
+          margin-right: 10px;
+
+          @include media-breakpoint-between($xs, $sm) {
+            width: 50px;
+          }
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+

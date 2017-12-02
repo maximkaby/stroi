@@ -1,0 +1,158 @@
+@import "partials/mixin";
+@import "partials/params";
+
+.footer {
+  @include clear;
+
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+
+  &__map {
+    width: 45%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    @include media-breakpoint-down($md) {
+      width: 100%;
+      height: 100%;
+      position: static;
+    }
+  }
+
+  .politic__link {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    padding-right: 10px;
+
+  }
+
+  .contacts__title {
+    h3 {
+      font-family: Roboto, sans-serif;
+      text-transform: uppercase;
+      font-size: 48px;
+      color: rgb(60, 60, 60);
+      margin-top: 35px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .contacts__relations {
+    @include media-breakpoint-down($md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .contacts__address {
+    color: #2a2a2a;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+
+    h3 {
+      font-family: Roboto, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+
+      @include media-breakpoint-down($md) {
+        text-align: center;
+      }
+    }
+
+    p {
+      @include media-breakpoint-down($md) {
+        text-align: center;
+      }
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 300;
+      color: #2a2a2a;
+      text-decoration: underline;
+    }
+    @include media-breakpoint-down($md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .contacts__phone {
+    h3 {
+      font-family: Roboto, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      margin-top: 25px;
+      @include media-breakpoint-down($md) {
+        text-align: center;
+        margin: 0;
+      }
+    }
+
+    a {
+      color: #2a2a2a;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 25px;
+
+      @include media-breakpoint-down($md) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .contacts__mail {
+    h3 {
+      font-family: Roboto, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      @include media-breakpoint-down($md) {
+        text-align: center;
+      }
+    }
+
+    p {
+      @include media-breakpoint-down($md) {
+        text-align: center;
+      }
+    }
+    a {
+      color: #2a2a2a;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+  }
+
+  .contacts__rights {
+    width: 55%;
+    color: #2a2a2a;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down($md) {
+      width: 85%;
+      text-align: center;
+    }
+  }
+
+  .contacts__politic {
+    @include media-breakpoint-down($md) {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
