@@ -12,15 +12,7 @@ $(function () {
     }
   });
 
-//  var options = [];
-//  for(var i = 1; i < 6; i++){
-//    options[i-1] = {selector: '#advantage-'+ i, offset: 50, done: true, callback: function(el) {
-//      $('#advantage-' + i).animateCss('bounceInLeft').css({'opacity':1});
-//    }};
-//    console.log(options);
-//  };
 
-//  options = [];
 var options = [
   {selector: '.head__h1', offset: 150, callback: function(el) {
     $('.head__h1').animateCss('fadeInDown').css({'opacity':1});

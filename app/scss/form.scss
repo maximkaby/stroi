@@ -116,7 +116,11 @@
     }
 
     textarea {
-      height: 126px;
+      height: 206px;
+
+      @include media-breakpoint-down($md) {
+        height: 100px;
+      }
     }
   }
 
