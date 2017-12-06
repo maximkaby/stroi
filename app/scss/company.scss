@@ -56,6 +56,11 @@
 
   &__head {
 
+    position: absolute;
+    right: 8%;
+    width: 100%;
+    bottom: 35%;
+
     .subtitle__year {
       padding-top: 7%;
       font-size: 180px;
@@ -80,14 +85,20 @@
       color:rgb(255, 255, 255);
       margin-top: -3%;
 
+      @include media-breakpoint-up($xl) {
+        margin-top: -1%;
+      }
+
     }
   }
 
   &__advantages {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
+    width: 100%;
+    bottom: 8%;
 
     @include media-breakpoint-down($lg) {
       margin-top: 7%;
