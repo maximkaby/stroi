@@ -52,9 +52,20 @@
     margin: 2% 0 0 0;
 
     @include media-breakpoint-down($lg) {
-      margin-right: -1.5%;
-      margin-left: -1.5%;
+      margin-right: -1.5%!important;
+      margin-left: -1.5%!important;
       margin-top: 4%;
+    }
+  }
+
+  &-prev {
+    @include media-breakpoint-up($lg) {
+      left: 0;
+    }
+  }
+  &-next {
+    @include media-breakpoint-up($lg) {
+      right: 0;
     }
   }
 }

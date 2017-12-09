@@ -1,0 +1,59 @@
+@import "partials/params";
+@import "partials/mixin";
+
+.news__wrapper {
+  margin-top: 7%;
+  line-height: 1.3rem;
+
+  @include media-breakpoint-down($xl) {
+    margin-top: 9%;
+  }
+
+  @include media-breakpoint-down($md) {
+    margin-top: 11%;
+  }
+  @include media-breakpoint-down($sm) {
+    margin-top: 25%;
+  }
+
+  .news__row {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down($md) {
+      flex-direction: column;
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+}
+
+.news__title {
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 2%;
+  border-bottom: 1px #e6e6e6 solid;
+}
+
+.news__image-box {
+  padding-top: 2%;
+}
+
+.news__image-box {
+  padding-bottom: 2%;
+  border-bottom: 1px #e6e6e6 solid;
+}
+
+.body__small {
+  padding: 1% 0;
+  border-bottom: 1px #e6e6e6 solid;
+}
+
+.body__title {
+  a {
+    color: black;
+  }
+}
