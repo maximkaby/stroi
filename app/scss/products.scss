@@ -2,11 +2,19 @@
 @import "partials/params";
 
 .wrapper__products {
+
+  padding-top: $marg1;
   padding-bottom: 80px;
   border-bottom: 1px #e6e6e6 solid;
 
+  @include media-breakpoint-down($md) {
+    padding-top: $marg2;
+  }
+
+
   @include media-breakpoint-down($sm) {
     padding-bottom: 40px;
+    padding-top: $marg3;
   }
 }
 
@@ -17,14 +25,23 @@
   }
 
   &__head {
+
+    margin-bottom: $marg1;
+
+    @include media-breakpoint-down($md){
+      margin-bottom: $marg2 - 10px;
+    }
+    @include media-breakpoint-down($sm){
+      margin-bottom: $marg3 - 15px;
+    }
+
     h3 {
       font-family: Roboto, sans-serif;
-      font-size: 50px;
+      font-size: $fs1;
       text-align: center;
-      padding: 30px 0;
-
+      color: $black;
       @include media-breakpoint-down($sm) {
-        font-size: 35px;
+        font-size: $fs3;
       }
     }
   }
@@ -37,7 +54,11 @@
 
   &__item {
     position: relative;
-    padding: 2%;
+    padding: 2% 2% 2% 2%;
+
+    @include media-breakpoint-down($sm) {
+      padding-top: 5%;
+    }
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -129,8 +150,7 @@
       font-size: 16px;
       line-height: 24px;
       text-decoration: none;
-      color: #000;
-      //border-bottom: 1px solid transparent;
+      color: $black;
 
       &:hover {
         text-decoration: underline;
@@ -148,10 +168,6 @@
     right: 15px;
     bottom: 15px;
     background-color: #808080;
-      //
-      //height: 100%;
-      //display: flex;
-      //align-items: center;
 
     a {
       color: white;

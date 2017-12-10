@@ -12,7 +12,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Строй Арт</a>
+            <a class="navbar-brand" href="/">Строй Арт</a>
             <button type="button" class="navbar-toggler tcon tcon-menu--xbutterfly" data-toggle="collapse"
                     data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="toggle menu">
@@ -21,11 +21,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#">Продукция</a>
-                    <a class="nav-item nav-link" href="#">Качество</a>
-                    <a class="nav-item nav-link" href="#">Наши партнёры</a>
-                    <a class="nav-item nav-link" href="#">Где купить?</a>
-                    <a class="nav-item nav-link" href="#">Контакты</a>
+                    <a class="nav-item nav-link" href="#services">Услуги</a>
+                    <a class="nav-item nav-link" href="#aboutUs">О нас</a>
+                    <a class="nav-item nav-link" href="/index3.html">Товары</a>
+                    <a class="nav-item nav-link" href="#advantages">Преимущества</a>
+                    <a class="nav-item nav-link" href="/index2.html">Новости</a>
+                    <a class="nav-item nav-link" href="#contacts">Контакты</a>
                 </div>
             </div>
         </nav>
@@ -43,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div class="services">
+    <div id="services" class="services">
         <div class="services__title">
             <h3>Услуги</h3>
         </div>
@@ -69,18 +70,17 @@
             </div>
         </div>
     </div>
-    <div class="wrapper__advantages">
+    <div id="aboutUs" class="wrapper__advantages">
         <div class="wrapper__bgc container">
             <div class="advantages__container">
-                <div class="advantages__title">Строй Арт — это:</div>
+                <div class="advantages__title">Строй Арт — это</div>
                 <div class="advantages__subtitle">
                     <ul>
                         <li class="subtitle__item" id="item-1"><img src="img/icon-what1.png">
                             <p><span>Професиональная</span> помощь и сопровождение производства</p></li>
 
                         <li class="subtitle__item" id="item-2"><img src="img/icon-what2.png">
-                            <p><span>Более 10 лет</span> на рынке продаж комплектующих<br> для светопрозрачных
-                                конструкций
+                            <p><span>Более 10 лет</span> на рынке продаж комплектующих
                         </li>
                         <li class="subtitle__item" id="item-3"><img src="img/icon-what3.png">
                             <p><span>Широкий</span> ассортимент товара
@@ -221,7 +221,7 @@
             </div>
         </div>
     </div>
-    <div class="page__part">
+    <div id="advantages" class="page__part">
         <div class="part__head">
             <div class="head__h1">Преимущества</div>
             <p id="p">Наш опыт и репутация — это самое главное, но есть еще<br> несколько очень важных моментов:</p>
@@ -349,7 +349,6 @@
             </div>
         </div>
     </div>
-
     <div class="swiper">
         <div class="swiper-container container">
             <div class="swiper__title">
@@ -369,10 +368,9 @@
             <div class="swiper-button-prev swiper-button-black"></div>
         </div>
     </div>
-
     <div class="partners container">
         <div class="partners__title">
-            Наши партнёры:
+            Наши партнёры
         </div>
 
         <div class="partners__swiper swipper-container">
@@ -415,7 +413,7 @@
             </form>
         </div>
     </div>
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div class="footer__container container">
             <div class="footer__info row ">
                 <div class="contacts__relations col-lg-7">
@@ -439,24 +437,20 @@
                         <p><a href="#">stroyart-omsk@inbox.ru</a></p>
                     </div>
                     <div class="contacts__rights">
-                        Все материалы защищены авторскими правами<br>
+                        Все материалы защищены авторскими правами
                         любое копирование фото, видео и текстовых материалов разрешено<br>только с письменного
                         согласия
                         правообладателя.
                     </div>
                     <div class="contacts__politic">
-                        <a href="#" class="politic__link">Политика конфиденциальности</a>
-                        <a href="#" class="politic__link">Отказ от ответственности</a>
-                        <a href="#" class="politic__link">Конфиденциальность данных</a>
+                        <span>Дизайн и разработка - <a href="http://iwd-team.ru/" class="politic__link">IWD-team</a></span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer__map">
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2f3df9433e7eb574f01dc8c5a864a2d361d4b18755b0ced2c65809cdb659e00&amp;source=constructor"
-                    width="100%" height="100%" frameborder="0"></iframe>
-        </div>
-    </footer>
+                    width="100%" height="100%" frameborder="0" align="top"></iframe></div></footer>
 
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>

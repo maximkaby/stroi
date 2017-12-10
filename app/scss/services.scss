@@ -4,12 +4,26 @@
 .services {
 
   &__title {
-    margin: 80px 0 0 0;
+    margin: $marg1 0 0 0;
     text-align: center;
+
+    @include media-breakpoint-down($md) {
+      margin-top: $marg2;
+    }
+
+    @include media-breakpoint-down($sm) {
+      margin-top: $marg3;
+    }
     h3 {
-      font-size: 50px;
-      @include media-breakpoint-down($lg) {
-        font-size: 35px;
+      line-height: 1;
+      font-size: $fs1;
+      color: $black;
+      font-family: Roboto, sans-serif;
+      @include media-breakpoint-down($md) {
+        font-size: $fs2;
+      }
+      @include media-breakpoint-down($sm) {
+        font-size: $fs3;
       }
     }
   }
@@ -17,10 +31,16 @@
   &__subtitle {
     text-align: center;
     font-weight: 400;
-    font-size: 25px;
-    margin-bottom: 100px;
+    font-size: 22px;
+    margin-bottom: $marg1;
     @include media-breakpoint-up($md) {
       font-size: 20px;
+    }
+    @include media-breakpoint-down($md) {
+      margin-bottom: $marg2;
+    }
+    @include media-breakpoint-down($sm) {
+      margin-bottom: $marg3;
     }
   }
 

@@ -12,7 +12,7 @@ var config = {
   paths: {
     scss: './app/scss/**/*.scss',
     js: './app/js/**/*.js',
-    html: './app/*.html'
+    html: './app/index.html'
   },
   output: {
     cssName: 'bundle.min.css',
@@ -45,6 +45,7 @@ gulp.task('serve', function () {
   gulp.watch(config.paths.js).on('change', browserSync.reload);
   gulp.watch(config.paths.html).on('change', browserSync.reload);
 });
+
 
 gulp.task('libs-css', function() {
   return gulp.src([

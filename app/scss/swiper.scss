@@ -2,10 +2,19 @@
 @import "partials/params";
 
 .swiper__title {
-  font-size: 50px;
+  font-size: $fs1;
   text-align: center;
   font-weight: 400;
-  margin: 50px 0;
+  margin: $marg1;
+  color: $black;
+  font-family: Roboto, sans-serif;
+
+  @include media-breakpoint-down($md) {
+    margin: $marg2 0;
+  }
+  @include media-breakpoint-down($sm) {
+    margin: $marg3 0;
+  }
 }
 
 .swiper-container {
@@ -34,6 +43,10 @@
 
   img {
     width: 80% !important;
+
+    @include media-breakpoint-down($lg) {
+      width: 70%!important;
+    }
   }
 }
 
@@ -49,12 +62,12 @@
 .swiper-button {
   &-prev, &-next {
     display: flex;
-    margin: 2% 0 0 0;
+    margin: 4% 0 0 0;
 
     @include media-breakpoint-down($lg) {
       margin-right: -1.5%!important;
       margin-left: -1.5%!important;
-      margin-top: 4%;
+      margin-top: 6%;
     }
   }
 

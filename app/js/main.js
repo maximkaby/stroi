@@ -89,7 +89,34 @@ Materialize.scrollFire(options);
   $('.pagination-inner a').on('click', function() {
     $(this).siblings().removeClass('pagination-active');
     $(this).addClass('pagination-active');
-  })
+  });
+
+  var navHeight = $('nav.navbar').height() + 40;
+
+  $(".navbar-nav a[href='#services']").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#services").offset().top - navHeight
+    }, 800);
+  });
+  $(".navbar-nav a[href='#aboutUs']").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#aboutUs").offset().top - navHeight + 40
+    }, 800);
+  });
+  $(".navbar-nav a[href='#advantages']").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#advantages").offset().top - navHeight
+    }, 800);
+  });
+  $(".navbar-nav a[href='#contacts']").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#contacts").offset().top - navHeight
+    }, 800);
+  });
 
 
 });

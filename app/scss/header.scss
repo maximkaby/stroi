@@ -5,7 +5,7 @@ header {
 
   .navbar {
 
-    box-shadow: 0 1px 1px 1px rgba(0,0,0,.08);
+    box-shadow: 0 1px 1px 1px rgba($black, .08);
     padding: 0!important;
     top: 0;
     position: fixed!important;
@@ -14,16 +14,17 @@ header {
 
     &-collapse {
       justify-content: flex-end;
+      margin-right: 3rem;
     }
 
     .navbar-brand {
       padding-top: 0!important;
-      padding-left: 2rem;
+      padding-left: 4.5rem;
     }
 
     .nav-link {
       text-align: center;
-      font-size: 13px !important;
+      font-size: 14px !important;
       font-weight: 600 !important;
       text-decoration: none;
       text-transform: uppercase;
@@ -32,15 +33,24 @@ header {
       padding-left: 1.5rem !important;
       padding-right: 1.5rem !important;
       height: 100%;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 40px;
+      padding-bottom: 40px;
       transition: all 0.2s;
 
-      &:hover {
-        background-color: #F7CFA3 !important;
-        transition: 0.3s;
+      &:after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: #343434;
+        transition: width .6s ease-in-out;
       }
-
+      &:hover {
+        color: $black !important;
+        &:after {
+          width: 100%;
+        }
+      }
       @include media-breakpoint-down($lg){
         width: 100%;
       }
