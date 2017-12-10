@@ -1,0 +1,19 @@
+@import "partials/mixin";
+@import "partials/params";
+
+.products {
+  margin-top: 7%;
+  line-height: 1.3rem;
+
+  @include media-breakpoint-down($xl) {
+    margin-top: 9%;
+  }
+
+  @include media-breakpoint-down($md) {
+    margin-top: 11%;
+  }
+  @include media-breakpoint-down($sm) {
+    margin-top: 25%;
+  }
+
+}

@@ -5,6 +5,9 @@
   padding-bottom: 80px;
   border-bottom: 1px #e6e6e6 solid;
 
+  @include media-breakpoint-down($sm) {
+    padding-bottom: 40px;
+  }
 }
 
 .products {

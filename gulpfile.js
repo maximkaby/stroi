@@ -12,7 +12,7 @@ var config = {
   paths: {
     scss: './app/scss/**/*.scss',
     js: './app/js/**/*.js',
-    html: './app/index2.html'
+    html: './app/*.html'
   },
   output: {
     cssName: 'bundle.min.css',
