@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Title</title>
-    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
     <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/jquery.modal.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="bundle.min.css">
 </head>
 <body>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Строй Арт</a>
+            <a class="navbar-brand" href="/">
+                <img src="img/logo.jpg" alt="">
+            </a>
             <button type="button" class="navbar-toggler tcon tcon-menu--xbutterfly" data-toggle="collapse"
                     data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="toggle menu">
@@ -21,16 +24,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#">Продукция</a>
-                    <a class="nav-item nav-link" href="#">Качество</a>
-                    <a class="nav-item nav-link" href="#">Наши партнёры</a>
-                    <a class="nav-item nav-link" href="#">Где купить?</a>
-                    <a class="nav-item nav-link" href="#">Контакты</a>
+                    <a class="nav-item nav-link" href="/index.html#services">Услуги</a>
+                    <a class="nav-item nav-link" href="/index.html#aboutUs">О нас</a>
+                    <a class="nav-item nav-link" href="/index3.html">Товары</a>
+                    <a class="nav-item nav-link" href="/index.html#advantages">Преимущества</a>
+                    <a class="nav-item nav-link" href="/index2.html">Новости</a>
+                    <a class="nav-item nav-link" href="/index.html#contacts">Контакты</a>
                 </div>
             </div>
         </nav>
     </header>
-
     <div class="wrapper img-fluid">
         <div class="wrapper__content img-fluid">
             <div class="wrapper__title">
@@ -44,165 +47,178 @@
             </div>
         </div>
     </div>
-
-    <div class="wrapper__list">
-        <div class="list container">
-            <div class="list__title">
-                100% качество изделий
+    <div id="services" class="services">
+        <div class="services__title">
+            <h3>Услуги</h3>
+        </div>
+        <div class="services__subtitle">
+            Все услуги сервиса делятся на четыре основных подразделения.
+        </div>
+        <div class="services__item">
+            <div class="services__unit unit-1">
+                <div class="unit"><img src="img/box2.png"></div>
+                <div class="unit__title">Поставка фурнитуры</div>
             </div>
-            <div class="list__subtitles">
-                <ul>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Большие поля допусков в зазоре</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Температурный диапазон эксплуатации от -60 до +120 °С</span>
-                    </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Низкая чувствительность к быстрым циклическим<br> температурным изменениям</span>
-                    </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Низкая чувствительность к воздействию озона, ультрафиолета</span>
-                    </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Высокая прочность к механическим воздействиям</span>
-                    </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Высокая эластичность на протяжении 5 лет</span>
-                    </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Низкая остаточная деформация</span>
-                    </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Область твердости по Шору: 40-90 Shore</span>
-                    </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Плотные углы при непрерывном протягивании резины,<br> малые радиусы закругления</span>
-                    </li>
-                </ul>
+            <div class="services__unit unit-2">
+                <div class="unit"><img src="img/machine-press.png"></div>
+                <div class="unit__title">Изготовление отливов<br></div>
+            </div>
+            <div class=" services__unit unit-2">
+                <div class="unit"><img src="img/assembly-line.png"></div>
+                <div class="unit__title">Изготовление антимоскитных сеток</div>
+            </div>
+            <div class=" services__unit unit-1">
+                <div class="unit"><img src="img/cargo-truck.png"></div>
+                <div class="unit__title">Доставка нашим транспортом</div>
             </div>
         </div>
     </div>
-
-    <div class="wrapper__advantages">
+    <div id="aboutUs" class="wrapper__advantages">
         <div class="wrapper__bgc container">
             <div class="advantages__container">
-                <div class="advantages__title">Строй Арт — это:</div>
+                <div class="advantages__title">Строй Арт — это</div>
                 <div class="advantages__subtitle">
                     <ul>
                         <li class="subtitle__item" id="item-1"><img src="img/icon-what1.png">
-                            <p><span>12000 т</span> продукции в год — <br>
-                                производственная мощность</p></li>
+                            <p><span>Професиональная</span> помощь и сопровождение производства</p></li>
+
                         <li class="subtitle__item" id="item-2"><img src="img/icon-what2.png">
-                            <p><span>10 лет</span> — опыт производства<br> уплотнителей</p>
+                            <p><span>Более 10 лет</span> на рынке продаж комплектующих
                         </li>
                         <li class="subtitle__item" id="item-3"><img src="img/icon-what3.png">
-                            <p><span>4</span> автоматизированные<br> производственные линии
+                            <p><span>Широкий</span> ассортимент товара
+                                <br>
                             </p>
                         </li>
                     </ul>
                     <ul>
                         <li class="subtitle__item" id="item-4"><img src="img/icon-what4.png">
-                            <p><span>Более 150</span> специалистов<br> высочайшей
-                                квалификации
+                            <p><span>Надежные</span> поставщики качественной продукции
                             </p></li>
                         <li class="subtitle__item" id="item-5"><img src="img/icon-what5.png">
-                            <p><span>Более 100</span> дилеров по всей России</p></li>
+                            <p><span>Большой</span> складской запас.
+                                Комплектация любых производителей</p>
+                        </li>
                         <li class="subtitle__item" id="item-6"><img src="img/icon-what6.png">
-                            <p><span>Более 20</span> крупнейших клиентов —<br>
-                                производителей профилей ПВХ<br>
-                                и алюминия в странах СНГ</p></li>
+                            <p><span>Более 70</span> клиентов <br>
+                                в Омске и Омской области
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="page__part">
-        <div class="part__head">
-            <div class="head__h1">Преимущества</div>
-            <p id="p">Наш опыт и репутация — это самое главное, но есть еще<br> несколько очень важных моментов:</p></div>
-        <div class="part__advantages">
-            <div class="part__advantage" id="advantage-1">
-                <div class="part">
-                <div class="part__box">
-                    <div class="box__data">
-                        <div class="data__title"><h3>1. Широкий ассортимент товара и складской запас</h3>Позволяет оперативно
-                            отгружать товары по доступным ценам. Позволяет оперативно
-                            отгружать товары по доступным ценам.
-                        </div>
-                        <!--<div class="dsc sa-cl2-r"> Склад нужен не&nbsp;только для того, чтобы хранить. Мы&nbsp;консолидируем,-->
-                        <!--проверяем заказы по&nbsp;инвойсу и&nbsp;контролируем качество. Десятки видов качественной-->
-                        <!--упаковки к&nbsp;вашим услугам в&nbsp;Китае.-->
-                        <!--</div>-->
-                    </div>
-                    <div class="box__icon"><img src="img/i2.png" alt="Складские комплексы в Китае и России">
-                    </div>
-                </div>
-                </div>
+    <div class="wrapper__products">
+        <div class="products container">
+            <div class="products__head">
+                <h3>Наши товары</h3>
             </div>
-            <div class="part__advantage" id="advantage-2">
-                <div class="part">
-                <div class="part__box">
-                    <div class="box__icon"><img src="img/i4.png" alt="Юридическая безопасность"></div>
-                    <div class="box__data">
-                        <div class="box__title"><h3>2. Декларируем самостоятельно</h3></div>
-                        <div class="box__subtitle"> Ничто так не&nbsp;влияет на&nbsp;цену, как отсутствие посредников.
-                            Больше тысячи готовых сертификатов и&nbsp;300&nbsp;ТНВЭД кодов мы&nbsp;уже оформили и&nbsp;успешно
-                            оптимизировали. Дешевая доставка из&nbsp;Китая теперь доступна каждому.
-                        </div>
-                    </div>
-                </div>
-                </div>
+            <div class="products__list">
             </div>
-            <div class="part__advantage" id="advantage-3">
-            <div class="part">
-                <div class="part__box">
-                    <div class="box__data">
-                        <div class="data__title">
-                            <h3>3. Комплексное обслуживание.</h3>
-                            Осуществляем сопровождение производств (регулировка, настройка станков), прописываем наш
-                            ассортимент (в т.ч. фурнитуру и профильные системы) в любую существующую программу
-                        </div>
-                        <!--<div class="dsc sa-cl2-r"> С&nbsp;китайскими поставщиками мы&nbsp;заключаем договоры поставок по&nbsp;всем-->
-                        <!--нормам местного и&nbsp;международного права. Мы&nbsp;работаем в&nbsp;одном правовом поле,-->
-                        <!--что сводит ваши риски практически к&nbsp;нулю. Transitplus&nbsp;— надежный посредник в&nbsp;Китае.-->
-                        <!--</div>-->
-                    </div>
-                    <div class="box__icon"><img src="img/i3.png" alt="Декларируем самостоятельно"></div>
-                </div>
-            </div>
-            </div>
-            <div class="part__advantage" id="advantage-4">
-                <div class="part">
-                <div class="part__box">
-                    <div class="box__icon"><img src="img/i5.png" alt="Комплексное обслуживание"></div>
-                    <div class="box__data">
-                        <div class="data__title"><h3>4. Юридическая безопасность</h3>Оплата товара возможна как путем перевода денежных средств на
-                            расчетный счет, так и непосредственно при получении заказа.
-                        </div>
-                        <!--<div class="dsc sa-cl3"> Наш сервис построен таким образом: чем больше услуг вы&nbsp;отдаете нам-->
-                            <!--на&nbsp;обслуживание, тем больше времени сможете уделить своему бизнесу. Все процессы-->
-                            <!--сервиса подготовлены для компаний разного уровня. Аутсорсинг ВЭД&nbsp;— это выгодно,-->
-                            <!--безопасно и&nbsp;удобно!-->
-                        <!--</div>-->
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="part__advantage" id="advantage-5">
-                <div class="part">
-                <div class="part__box">
-                    <div class="box__data">
-                        <div class="data__title"><h3>5. Оплата заказов при получении</h3></div>
-                        <div class="data__subtitle"> Новая опция, в&nbsp;рамках которой вы&nbsp;сможете оплатить любой
-                            заказ при получении на&nbsp;нашем складе в&nbsp;Москве, а&nbsp;также воспользоваться
-                            ответственным хранением. Лучший посредник&nbsp;— доставка из&nbsp;Китая и&nbsp;склад в&nbsp;одном
-                            лице.
-                        </div>
-                    </div>
-                    <div class="box__icon"><img src="img/i6.png" alt="Оплата заказов при получении"></div>
-                </div>
+            <div class="products__catalog">
+                <div class="wrapper-1">
+                    <a href="/index3.html" class="button">Посмотреть все товары</a>
                 </div>
             </div>
         </div>
     </div>
-
+    <div id="advantages" class="page__part">
+        <div class="part__head">
+            <div class="head__h1">Преимущества</div>
+            <p id="p">Наш опыт и репутация — это самое главное, но есть еще<br> несколько очень важных моментов</p>
+        </div>
+        <div class="part__advantages">
+            <div class="part__advantage" id="advantage-1">
+                <div class="part">
+                    <div class="part__box">
+                        <div class="box__data">
+                            <div class="data__title"><h3>1. Широкий ассортимент товара и складской запас</h3>
+                                Позволяет
+                                оперативно
+                                отгружать товары по доступным ценам. Позволяет оперативно
+                                отгружать товары по доступным ценам.
+                            </div>
+                            <!--<div class="dsc sa-cl2-r"> Склад нужен не&nbsp;только для того, чтобы хранить. Мы&nbsp;консолидируем,-->
+                            <!--проверяем заказы по&nbsp;инвойсу и&nbsp;контролируем качество. Десятки видов качественной-->
+                            <!--упаковки к&nbsp;вашим услугам в&nbsp;Китае.-->
+                            <!--</div>-->
+                        </div>
+                        <div class="box__icon"><img src="img/i2.png" alt="Складские комплексы в Китае и России">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part__advantage" id="advantage-2">
+                <div class="part">
+                    <div class="part__box">
+                        <div class="box__icon"><img src="img/individual.png" alt="Юридическая безопасность"></div>
+                        <div class="box__data">
+                            <div class="box__title"><h3>2. Индивидуальный подход</h3></div>
+                            <div class="box__subtitle"> Индивидуальный подход и внимательное отношение
+                                к существующим и потенциальным клиентам.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part__advantage" id="advantage-3">
+                <div class="part">
+                    <div class="part__box">
+                        <div class="box__data">
+                            <div class="data__title">
+                                <h3>3. Комплексное обслуживание.</h3>
+                                Осуществляем сопровождение производств (регулировка, настройка станков), прописываем
+                                наш
+                                ассортимент (в т.ч. фурнитуру и профильные системы) в любую существующую программу
+                            </div>
+                            <!--<div class="dsc sa-cl2-r"> С&nbsp;китайскими поставщиками мы&nbsp;заключаем договоры поставок по&nbsp;всем-->
+                            <!--нормам местного и&nbsp;международного права. Мы&nbsp;работаем в&nbsp;одном правовом поле,-->
+                            <!--что сводит ваши риски практически к&nbsp;нулю. Transitplus&nbsp;— надежный посредник в&nbsp;Китае.-->
+                            <!--</div>-->
+                        </div>
+                        <div class="box__icon"><img src="img/i3.png" alt="Декларируем самостоятельно"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="part__advantage" id="advantage-4">
+                <div class="part">
+                    <div class="part__box">
+                        <div class="box__icon"><img src="img/prices.png" alt="Комплексное обслуживание"></div>
+                        <div class="box__data">
+                            <div class="data__title">
+                                <h3>4. Гибкая ценовая политика</h3>
+                                Благодаря наличию собственного производства и долгосрочных партнерских
+                                отношений с прямыми поставщиками мы предлагаем нашим клиентам выгодные цены и гибкую систему оплаты
+                            </div>
+                            <!--<div class="dsc sa-cl3"> Наш сервис построен таким образом: чем больше услуг вы&nbsp;отдаете нам-->
+                            <!--на&nbsp;обслуживание, тем больше времени сможете уделить своему бизнесу. Все процессы-->
+                            <!--сервиса подготовлены для компаний разного уровня. Аутсорсинг ВЭД&nbsp;— это выгодно,-->
+                            <!--безопасно и&nbsp;удобно!-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part__advantage" id="advantage-5">
+                <div class="part">
+                    <div class="part__box">
+                        <div class="box__data">
+                            <div class="data__title"><h3>5. Оплата заказов при получении</h3></div>
+                            <div class="data__subtitle"> Оплата товара возможна как путем
+                                перевода денежных средств на
+                                расчетный счет, так и непосредственно при получении заказа.
+                            </div>
+                        </div>
+                        <div class="box__icon"><img src="img/i6.png" alt="Оплата заказов при получении"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="company img-fluid">
-        <div class="company__wrapper container">
+        <div class="company__wrapper">
             <div class="company__number">
                 <div class="h1">
-                    <a href="#">Компания в цифрах</a>
+                    Компания в цифрах
                 </div>
                 <p>Наши клиенты доверяют нам<br> и поэтому зарабатывают вместе с нами.</p>
             </div>
@@ -213,7 +229,7 @@
                 </div>
             </div>
         </div>
-        <div class="company__advantages container">
+        <div class="company__advantages">
             <div class="advantages__first col-lg-4">
                 <div class="advantages__title">50+</div>
                 <div class="advantages__subtitle">постоянных<br>клиентов</div>
@@ -229,26 +245,44 @@
         </div>
     </div>
 
+    <div class="swiper">
+        <div class="swiper-container container">
+            <div class="swiper__title">
+                Сертификаты
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/GEVISS%20SERTIFICAT-1.jpg" class="img-fluid"></div>
+                <div class="swiper-slide"><img src="img/Арти-1.jpg" class="img-fluid"></div>
+                <div class="swiper-slide"><img src="img/Винкхаус%20Актив%20Пилот-1.jpg" class="img-fluid"></div>
+                <div class="swiper-slide"><img src="img/Исполин%20сэндвич-1.jpg" class="img-fluid"></div>
+                <div class="swiper-slide"><img src="img/пена%20до%202019г.jpg" class="img-fluid"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-black"></div>
+            <div class="swiper-button-prev swiper-button-black"></div>
+        </div>
+    </div>
     <div class="partners container">
         <div class="partners__title">
-            Наши партнёры:
+            Наши партнёры
         </div>
 
         <div class="partners__swiper swipper-container">
             <div class="swipper-container">
                 <div class="swipper-wrapper">
-                    <div class="swipper-slide"><img src="img/Proplex.png" class="img-fluid"></div>
-                    <div class="swipper-slide"><img src="img/Montblanc.png" class="img-fluid"></div>
-                    <div class="swipper-slide"><img src="img/Wintech.png" class="img-fluid"></div>
-                    <div class="swipper-slide"><img src="img/Rehau.png" class="img-fluid"></div>
+                    <div class="swipper-slide"><img src="img/vision.jpg" class="img-fluid"></div>
+                    <div class="swipper-slide"><img src="img/winkhaus.png" class="img-fluid"></div>
+                    <div class="swipper-slide"><img src="img/geviss.jpg" class="img-fluid"></div>
+                    <div class="swipper-slide"><img src="img/atekom.png" class="img-fluid"></div>
                 </div>
                 <div class="swipper-button-next"></div>
                 <div class="swipper-button-prev"></div>
             </div>
         </div>
     </div>
-
-    <div class="forms">
+    <div id="forms" class="forms">
         <div class="forms__container container">
             <div class="forms__title">
                 Задайте ваш вопрос или кратко опишите ситуацию.
@@ -275,8 +309,7 @@
             </form>
         </div>
     </div>
-
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div class="footer__container container">
             <div class="footer__info row ">
                 <div class="contacts__relations col-lg-7">
@@ -287,7 +320,7 @@
                         <h3>Адрес</h3>
                         <p>ООО "Строй Арт"
                             <br>г. Омск, ул. Вавилова д. 242
-                            <br><a href="#">Записаться на просмотр</a>
+                            <br><a href="#forms">Записаться на просмотр</a>
                         </p>
                     </div>
                     <div class="contacts__phone">
@@ -300,26 +333,112 @@
                         <p><a href="#">stroyart-omsk@inbox.ru</a></p>
                     </div>
                     <div class="contacts__rights">
-                        Все материалы защищены авторскими правами<br>
+                        Все материалы защищены авторскими правами
                         любое копирование фото, видео и текстовых материалов разрешено<br>только с письменного
                         согласия
                         правообладателя.
                     </div>
                     <div class="contacts__politic">
-                        <a href="#" class="politic__link">Политика конфиденциальности</a>
-                        <a href="#" class="politic__link">Отказ от ответственности</a>
-                        <a href="#" class="politic__link">Конфиденциальность данных</a>
+                        <span>Дизайн и разработка - <a href="http://iwd-team.ru/" class="politic__link">IWD-team</a></span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer__map">
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2f3df9433e7eb574f01dc8c5a864a2d361d4b18755b0ced2c65809cdb659e00&amp;source=constructor"
-                    width="100%" height="100%" frameborder="0"></iframe>
+                    width="100%" height="100%" frameborder="0" align="top"></iframe>
         </div>
     </footer>
 
+    <div id="shop" class="modal shop" style="display: none;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="products__item">
+                        <a href="#" class="products__img">
+                            <img src="img/activpilot_ergo.jpg">
+                        </a>
+                        <div class="products__desc">
+                            <div class="products__title">
+                                <a href="#">activPilot Ergo</a>
+                            </div>
+                            <div class="products__text">Поворотно-откидная фурнитура activPilot Ergo обеспечивает высоко комфортное и легкое управление окнами, расположенными в труднодоступных местах. При простом повороте ручки, размещенной на нижней части оконной створки на 90 градусов, фурнитура activPilot Ergo автоматически притягивает створку в соответствующее положение.
+                            </div>
+                            <div class="products__producer">
+                                <span>Производитель:</span> WINKHAUS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <form class="form">
+                        <div class="form__title">
+                            Отправьте заявку
+                        </div>
+                        <div class="form__subtitle">
+                            <div>Мы свяжемся с вами в течении рабочего дня</div>
+                            и ответим на все ваши вопросы!
+                        </div>
+                        <div class="form__inputs">
+                            <div class="half form__left">
+                                <input type="text" class="input-name" placeholder="Ваше имя и фамилия">
+                                <input type="text" class="input-subject" placeholder="Ваш телефон">
+                                <input type="email" class="input-email" placeholder="Email">
+                            </div>
+                            <div class="half form__right">
+                            </div>
+                        </div>
+                        <div class="form__agreement">
+                            * Отправляя форму, вы даете свое согласие на
+                            <a href="javascript:;">обработку персональных данных</a>
+                        </div>
+                        <div class="button">
+                            <input class="input-submit" type="submit" value="Отправить заявку" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="send-question" class="modal send-quest" style="display: none;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <form class="form">
+                        <div class="form__title">
+                            Отправьте заявку
+                        </div>
+                        <div class="form__subtitle">
+                            Мы свяжемся с вами в течении рабочего дня <br>
+                            и ответим на все ваши вопросы!
+                        </div>
+                        <div class="form__inputs">
+                            <div class="half form__left">
+                                <input type="text" class="input-name" placeholder="Ваше имя и фамилия">
+                                <input type="text" class="input-subject" placeholder="Ваш телефон">
+                                <input type="email" class="input-email" placeholder="Email">
+                            </div>
+                            <div class="half form__right">
+                            </div>
+                        </div>
+                        <div class="form__agreement">
+                            * Отправляя форму, вы даете свое согласие на
+                            <a href="javascript:;">обработку персональных данных</a>
+                        </div>
+                        <div class="button">
+                            <input class="input-submit" type="submit" value="Отправить заявку" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/libs.min.js"></script>
+    <script src="js/jquery.modal.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/Product.js"></script>
+    <script src="js/swiper.min.js"></script>
 </body>
 </html>
