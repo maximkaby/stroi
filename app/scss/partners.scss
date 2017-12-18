@@ -5,12 +5,13 @@
   width: 100%;
   height: 300px;
   margin: 0 auto;
+  color: $black;
 }
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  /* Center slide text vertically */
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -28,30 +29,45 @@
 .partners {
 
   &__title {
-    margin: 5% 0 3%;
+    color: $black;
+    margin: $marg1;
     font-family: Roboto, sans-serif;
-    font-weight: 700;
     text-align: center;
-    font-size: 30px;
-    text-transform: uppercase;
+    font-size: $fs1;
 
     @include media-breakpoint-down($md) {
-      font-size: 22px;
+      margin: $marg2;
+      font-size: $fs2;
+    }
+    @include media-breakpoint-down($sm) {
+      margin: $marg3;
+      font-size: $fs3;
     }
   }
 
   &__swiper {
     margin-bottom: 8%;
-
+    .swipper-slide{
+      flex-basis: 25%;
+      margin-bottom: 20px;
+      @include media-breakpoint-down($lg){
+        flex-basis: 50%;
+      }
+    }
     .swipper-wrapper {
-
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      text-align: center;
 
       img {
-        max-width: 70%!important;
+        height: 150px;
+        max-width: 80%!important;
+        @include media-breakpoint-down($lg){
+          max-width: 100% !important;
+        }
       }
     }
   }

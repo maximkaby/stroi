@@ -1,0 +1,136 @@
+@import "partials/params";
+@import "partials/mixin";
+
+.send-quest{
+
+	background-color: rgba(252,252,252,1);
+	&.modal{
+
+		width:auto;
+	}
+	.container-fluid{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		height: 100%;
+	}
+
+	form {
+		max-width: 840px;
+		text-align: center;
+		margin: 30px auto 45px;
+		@include media-breakpoint-down($md) {
+			width: 100%;
+			margin: 0;
+		}
+
+		input, textarea {
+			border: 0;
+			outline: 0;
+			padding: 1em;
+			border-radius: 8px;
+			display: block;
+			width: 100%;
+			margin-top: 1.2em;
+			font-family: 'Merriweather', sans-serif;
+			box-shadow: 0px 0px 1px 1px rgba(black, 0.3);
+			resize: none;
+
+			@include media-breakpoint-down($lg){
+				padding: 0.8em;
+			}
+			&:focus {
+				outline: none;
+				box-shadow: 0 0 1px 1px rgba(green, 0.8) !important;
+			}
+			&::placeholder{
+				font-size: 16px;
+			}
+		}
+
+		.button {
+			display: flex;
+			justify-content: center;
+		}
+
+		.input-submit {
+			width: auto;
+			padding: 0.7em 2em;
+			transition: all 0.3s;
+			color: white;
+			background: #F38848;
+			cursor: pointer;
+			border-radius: 30px;
+			&:hover {
+				transition: 0.5s;
+				box-shadow: 0 1px 1px 1px rgba(#aaa, 0.1);
+				background-color: #DB663F;
+			}
+		}
+
+		textarea {
+			height: 206px;
+
+			@include media-breakpoint-down($md) {
+				height: 100px;
+			}
+		}
+	}
+	.products__text{
+
+	}
+	.products__item{
+		@include media-breakpoint-down($lg){
+			border: none!important;
+		}
+	}
+
+	.form {
+		color: #3c3c3c;
+		font-family: 'Arial';
+		&__title{
+			font-size: 30px;
+			font-weight: bold;
+
+		}
+
+		&__subtitle{
+			font-size: 16px;
+			line-height: 1.1;
+			margin-bottom: 10px;
+			@include media-breakpoint-down($lg){
+				br{
+					display: none;
+				}
+			}
+		}
+		&__agreement {
+			margin: 10px 0;
+			font-size: 12px;
+			text-align: center;
+			color: #3c3c3c;
+			a {
+				color: #000;
+				text-decoration: underline;
+			}
+		}
+
+		&__inputs {
+			display: flex;
+			flex-direction: column;
+			@include media-breakpoint-down($md) {
+				flex-direction: column;
+			}
+		}
+
+		&__right {
+			@include media-breakpoint-down($md) {
+				width: 100%;
+			}
+		}
+
+		&__left {
+			//margin-right: 5%;
+		}
+	}
+
+}

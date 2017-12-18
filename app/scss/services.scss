@@ -1,0 +1,127 @@
+@import "partials/mixin";
+@import "partials/params";
+
+.services {
+
+  &__title {
+      margin: $marg1 0 0 0;
+      text-align: center;
+
+      @include media-breakpoint-down($md) {
+          margin-top: $marg2;
+      }
+
+      @include media-breakpoint-down($sm) {
+          margin-top: $marg3;
+      }
+      h3 {
+          line-height: 1;
+          font-size: $fs1;
+          color: $black;
+          font-family: Roboto, sans-serif;
+          @include media-breakpoint-down($md) {
+              font-size: $fs2;
+          }
+          @include media-breakpoint-down($sm) {
+              font-size: $fs3;
+              text-align: center;
+          }
+      }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: $marg1;
+    @include media-breakpoint-up($md) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-down($md) {
+      margin-bottom: $marg2;
+    }
+    @include media-breakpoint-down($sm) {
+      margin-bottom: $marg3;
+    }
+  }
+
+  &__item {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 50px 0 0 0;
+  }
+
+  &__unit {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 128px;
+
+      @include media-breakpoint-down($md) {
+        width: 100px;
+      }
+    }
+
+    &:nth-child(3) {
+      @include media-breakpoint-down($md) {
+        background-color: #f2f1f0!important;
+      }
+    }
+    &:nth-child(4) {
+      @include media-breakpoint-down($md) {
+        background-color: #e6ddd8!important;
+      }
+    }
+
+    @include media-breakpoint-between($md, $xl)
+    {
+      height: 320px;
+    }
+
+  }
+
+  .unit__title {
+    margin-top: 30px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 35px;
+
+    @include media-breakpoint-down($lg) {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  .unit-1 {
+    flex-basis: 50%;
+    background-color: #f2f1f0;
+    color: #1a1b1b;
+
+    @include media-breakpoint-down($md)
+    {
+      height:200px;
+      flex-basis: 100%;
+    }
+  }
+
+  .unit-2 {
+    flex-basis: 50%;
+    background-color: #e6ddd8;
+    color: #1a1b1b;
+
+    @include media-breakpoint-down($md)
+    {
+      height: 200px;
+      flex-basis: 100%;
+    }
+  }
+
+}

@@ -7,6 +7,7 @@
   position: relative;
   font-size: 18px;
   font-weight: 400;
+  color: $black;
 
   &__map {
     width: 45%;
@@ -19,27 +20,36 @@
     @include media-breakpoint-down($md) {
       width: 100%;
       height: 100%;
-      position: static;
+      position: relative;
     }
   }
 
   .politic__link {
-    color: #2a2a2a;
+    color: $black;
     text-decoration: none;
     font-size: 10px;
     font-weight: 700;
     padding-right: 10px;
-
   }
 
   .contacts__title {
     h3 {
       font-family: Roboto, sans-serif;
       text-transform: uppercase;
-      font-size: 48px;
+      font-size: $fs1;
       color: rgb(60, 60, 60);
-      margin-top: 35px;
+      margin-top: $marg1;
       margin-bottom: 25px;
+
+      @include media-breakpoint-down($md) {
+        font-size: $fs2;
+        margin-top: $marg2;
+      }
+
+      @include media-breakpoint-down($sm) {
+        font-size: $fs3;
+        margin-top: $marg3;
+      }
     }
   }
 
@@ -52,7 +62,7 @@
   }
 
   .contacts__address {
-    color: #2a2a2a;
+    color: $black;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 15px;
@@ -92,6 +102,7 @@
       font-weight: 700;
       margin-bottom: 15px;
       margin-top: 25px;
+      color: $black;
       @include media-breakpoint-down($md) {
         text-align: center;
         margin: 0;
@@ -137,7 +148,7 @@
   .contacts__rights {
     width: 55%;
     color: #2a2a2a;
-    font-family: Roboto, sans-serif;
+    font-weight: 500;
     font-size: 12px;
     margin-bottom: 15px;
 
@@ -148,10 +159,28 @@
   }
 
   .contacts__politic {
+    bottom: 0;
+    margin-bottom: 10px;
     @include media-breakpoint-down($md) {
       text-align: center;
       margin-bottom: 10px;
     }
+
+    span {
+      font-weight: 400;
+      font-size: 15px;
+      a {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        color: #82533b;
+      }
+    }
+  }
+
+  iframe {
+    position: relative;
+    bottom: 0!important;
   }
 
 }

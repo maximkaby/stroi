@@ -2,8 +2,9 @@
 @import "partials/mixin";
 
 .wrapper__advantages {
-  background: url("../img/back-what.png");
+  background: url("img/back-what.png");
   overflow: hidden;
+  padding-bottom: 40px;
 
 
   .wrapper__bgc {
@@ -16,16 +17,20 @@
     &__title {
       opacity: 0;
       text-align: center;
-      font-size: 35px;
-      text-transform: uppercase;
+      font-size: $fs1;
+      line-height: 1;
       font-family: 'Roboto', sans-serif;
-      padding: 30px 0;
+      padding: $marg1 0 $marg1 0;
       color: $white;
 
-      @include media-breakpoint-between($xs, $sm) {
-        padding: 15px 0;
+      @include media-breakpoint-down($md) {
+        padding: $marg2 0;
+      }
+      @include media-breakpoint-down($sm) {
+        padding: 30px 0;
         font-size: 30px;
       }
+
     }
 
     &__subtitle {
@@ -33,7 +38,6 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      padding: 0 5%;
 
       @include media-breakpoint-down($lg) {
         flex-direction: column;
@@ -46,9 +50,12 @@
       }
 
       ul {
+        @include media-breakpoint-between($sm, $md) {
+          margin-bottom: 0!important;
+        }
         @include media-breakpoint-between($xs, $sm) {
           padding: 0 0 0 10px;
-          margin-bottom: 0;
+          margin-bottom: 0!important;
         }
       }
 
@@ -74,7 +81,6 @@
 
         img {
           margin-right: 10px;
-
           @include media-breakpoint-between($xs, $sm) {
             width: 50px;
           }

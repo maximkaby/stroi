@@ -12,7 +12,7 @@
 
   .list {
     @include media-breakpoint-down($md) {
-      padding: 0!important;
+      padding: 0 !important;
     }
   }
 
@@ -40,10 +40,8 @@
       padding: 20px 0 10px;
     }
 
-
     li {
       @include clear-list;
-      padding: 12px 0;
       line-height: 24px;
       background: none;
       font-size: 22px;
@@ -51,18 +49,54 @@
       font-family: 'Roboto Light', sans-serif;
       display: flex;
       align-items: center;
+
       i {
         margin-right: 15px;
       }
       span {
+        padding: 12px 7px;
+
+        @include media-breakpoint-down($md){
+          padding: 0;
+        }
         width: 100%;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0;
+          height: 100%;
+          background: rgba(#f7f7f7,.5);
+
+          content: '';
+        }
+
+        &:hover::before {
+          animation: bg-animation 0.6s 1;
+          animation-fill-mode: forwards;
+        }
       }
 
       @include media-breakpoint-down($md) {
         padding: 6px 0;
         font-size: 15px;
       }
+
     }
   }
 
+}
+
+
+@-webkit-keyframes bg-animation {
+  0% {
+    width: 10%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }

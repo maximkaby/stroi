@@ -6,19 +6,23 @@
   .part__head {
 
     .head__h1 {
+      line-height: 1;
+      margin-bottom: 10px;
       opacity: 0;
-      margin-top: 30px;
+      margin-top: $marg1;
       text-align: center;
-      font-size: 60px;
+      font-size: $fs1;
       font-weight: 200;
       font-family: Roboto, sans-serif;
+      color: $black;
 
       @include media-breakpoint-between($sm, $md) {
+        margin-top: $marg2;
         font-size: 40px;
       }
       @include media-breakpoint-down($sm) {
-        font-size: 30px;
-        margin: 20px;
+        font-size: $fs3;
+        margin-top: $marg3;
       }
     }
 
@@ -27,16 +31,18 @@
       text-align: center;
       font-size: 22px;
       line-height: 30px;
-      margin-bottom: 30px;
+      margin-bottom: $marg1;
 
       @include media-breakpoint-between($sm, $md) {
         font-size: 18px;
         line-height: 25px;
+        margin-bottom: $marg2;
       }
       @include media-breakpoint-down($sm) {
         br {
           display: none;
         }
+        margin-bottom: $marg3;
         padding: 0 5px;
         font-size: 12px;
         line-height: 14px;
@@ -49,6 +55,7 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    color: $black;
 
     @include media-breakpoint-down($lg) {
       padding: 0 5% 0 5%;
@@ -78,7 +85,13 @@
       width: 85%;
     }
   }
-
+  #advantage-2{
+    img{
+      @include media-breakpoint-between($md,$lg){
+        height: 120px;
+      }
+    }
+  }
   .box__icon {
     display: flex;
     align-items: center;
@@ -96,6 +109,9 @@
     }
 
     img {
+      @include media-breakpoint-up($md){
+        height: 160px;
+      }
       @include media-breakpoint-between($sm, $md) {
         width: 110px;
       }

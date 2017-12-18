@@ -12,15 +12,7 @@ $(function () {
     }
   });
 
-//  var options = [];
-//  for(var i = 1; i < 6; i++){
-//    options[i-1] = {selector: '#advantage-'+ i, offset: 50, done: true, callback: function(el) {
-//      $('#advantage-' + i).animateCss('bounceInLeft').css({'opacity':1});
-//    }};
-//    console.log(options);
-//  };
 
-//  options = [];
 var options = [
   {selector: '.head__h1', offset: 150, callback: function(el) {
     $('.head__h1').animateCss('fadeInDown').css({'opacity':1});
@@ -75,4 +67,68 @@ Materialize.scrollFire(options);
     else {
     document.getElementById('input-submit').value = 'Отправить сообщение';
   }
+
+
+
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  $('.pagination-inner a').on('click', function() {
+    $(this).siblings().removeClass('pagination-active');
+    $(this).addClass('pagination-active');
+  });
+
+  var navHeight = $('nav.navbar').height() + 40;
+
+  $(".navbar-nav a[href*='#services']").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#services").offset().top - navHeight
+    }, 800);
+  });
+  $(".navbar-nav a[href*='#aboutUs']").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#aboutUs").offset().top - navHeight + 40
+    }, 800);
+  });
+  $(".navbar-nav a[href*='#advantages']").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#advantages").offset().top - navHeight
+    }, 800);
+  });
+  $(".navbar-nav a[href*='#contacts']").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#contacts").offset().top - navHeight
+    }, 800);
+  });
+  $("footer a[href='#forms']").click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+          scrollTop: $("#forms").offset().top - navHeight +40
+      }, 800);
+  });
+
+  if(window.innerWidth < 992){
+      $('nav .nav-link').on('click', function () {
+        $('nav .navbar-toggler').click();
+      });
+    }
+
+
 });
